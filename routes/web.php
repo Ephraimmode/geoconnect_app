@@ -20,3 +20,22 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// public pages start
+Route::get('/about', function() {
+    return view('about');
+});
+
+Route::get('/cart', function() {
+    return view('cart');
+});
+
+Route::get('/contact', function() {
+    return view('contact');
+});
+
+Route::get('/courses', function() {
+    return view('courses');
+});
+
+// public pages ends
