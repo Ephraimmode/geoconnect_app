@@ -28,13 +28,13 @@
             <div class="flex md:justify-center w-full flex-col space-y-2">
                 <!-- links -->
                 <div class="hidden space-x-8 items-center justify-end font-bold md:flex">
-                    <a class="text-gray-500 hover:text-gray-800" href="{{ url('about') }}">About Us</a>
-                    <a class="text-gray-500 hover:text-gray-800" href="{{ url('courses') }}">Courses</a>
-                    <a class="text-gray-500 hover:text-gray-800" href="{{ url('contact') }}">Contact Us</a>
+                    <a class="text-gray-500 hover:text-gray-800" href="{{route('about')}}">About Us</a>
+                    <a class="text-gray-500 hover:text-gray-800" href="{{ route('courses') }}">Courses</a>
+                    <a class="text-gray-500 hover:text-gray-800" href="{{ route('contact') }}">Contact Us</a>
                     {{-- <a class="text-gray-500 hover:text-gray-800" href="career.html">Career</a> --}}
                     <a class="text-gray-500 hover:text-gray-800" href="{{ route('login') }}">Login</a>
                     <a class="text-gray-500 hover:text-gray-800" href="{{ route('register') }}">Enrol</a>
-                    <a href="{{ url('cart') }}" class="px-4 py-1 text-white bg-red-500 rounded-full hover:opacity-80">
+                    <a href="{{ route('cart') }}" class="px-4 py-1 text-white bg-red-500 rounded-full hover:opacity-80">
                         <svg width="20px" height="20px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M0 0h48v48H0z" fill="none"></path> <g id="Shopicon"> <path d="M4,40c0,2.2,1.8,4,4,4h32c2.2,0,4-1.8,4-4l0-26h-8.18C34.863,8.334,29.934,4,24,4S13.137,8.334,12.181,14H4L4,40z M24,8 c3.719,0,6.845,2.555,7.737,6H16.263C17.155,10.555,20.281,8,24,8z"></path> </g> </g></svg>
                     </a>
                 </div>

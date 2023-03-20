@@ -22,7 +22,7 @@
         <div class="flex">
             <!-- logo -->
             <div class="w-11">
-                <a href="{{ url('home') }}">
+                <a href="{{ route('dashboard') }}">
                     <img src="../assets/logo.png" alt="">
                 </a>
             </div>

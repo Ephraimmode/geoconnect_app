@@ -13,29 +13,29 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/dashboard', [App\Http\Controllers\dashboardController::class, 'index'])->name('dashboard');
 
 // public pages start
 Route::get('/about', function() {
     return view('about');
-});
+})->name('about');
 
 Route::get('/cart', function() {
     return view('cart');
-});
+})->name('cart');
 
 Route::get('/contact', function() {
     return view('contact');
-});
+})->name('contact');
 
 Route::get('/courses', function() {
     return view('courses');
-});
+})->name('courses');
 
 // public pages ends
+
+// i need to add the above public pages to home controller and re-route them acordingly
