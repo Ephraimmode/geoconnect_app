@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+Use App\Models\User;
+use Illuminate\Support\Str;
 
 class dashboardController extends Controller
 {
@@ -23,6 +26,19 @@ class dashboardController extends Controller
      */
     public function index()
     {
-        return view('dashboard');
-    }    //
+        $roles = Auth::user()->roles;
+
+        foreach($roles as $role){
+            $admin = $role->name;
+
+            if(Str::lower($admin) == 'global'){
+
+                return view('admin.index', ['roles'=>$roles]);
+
+            }
+        }
+
+        return view('dashboard', ['roles'=>$roles]);
+        
+    }
 }

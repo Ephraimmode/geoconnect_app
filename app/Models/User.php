@@ -1,12 +1,15 @@
 <?php
 
-namespace App\Models;
 
+namespace App\Models;
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Str;
 use Laravel\Sanctum\HasApiTokens;
+use phpDocumentor\Reflection\Types\True_;
+use App\Models\Course;
 
 class User extends Authenticatable
 {
@@ -17,6 +20,7 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+    
     protected $fillable = [
         'firstname',
         'lastname',
@@ -52,9 +56,27 @@ class User extends Authenticatable
         
     }
 
+    public function userHasRole($role_name){
+        foreach ($this->roles as $role){
+
+            if (Str::lower($role_name) == Str::lower($role->name)){
+                return true;
+            }
+
+            return false;
+
+        }
+    }
+
     public function courses(){
 
-        return $this->hasMany(Course::class);
+        return $this->hasMany('App\Models\Course');
+
+    }
+
+    public function orders(){
+
+        return $this->hasMany(Order::class);
 
     }
 }

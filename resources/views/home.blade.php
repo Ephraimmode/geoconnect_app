@@ -84,166 +84,32 @@
         <!--        creations headers-->
         <div class="flex mb-3 items-center justify-between">
             <h4 class="text-1xl tracking-widest text-center uppercase md:text left md:text-1xl">Online courses</h4>
-            <button class="btn rounded-md md:block hover:opacity-80">
+            <a href="{{ route('courses') }}" class="border border-red-500 px-3 py-1 hover:bg-red-500 uppercase hover:text-white rounded-md md:block hover:opacity-80">
                 see all
-            </button>
+            </a>
         </div>
         <!-- grid container -->
         <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4 items-center justify-between w-full mx-auto">
         <!-- grid item -->
+        @foreach($courses as $course)
             <div class="shadow-lg hover:shadow-none bg-white py-3 px-6 rounded-2xl">
                 <!-- flex -->
                 <div class="flex items-center flex-row p-0.5">
                     <!-- items -->
                     <img class="w-12 h-12 ring-2 mr-4 rounded-full ring-white shadow-md shadow-slate-400" src="assets/1.png" alt="">
                     <div class="flex flex-col w-full">
-                        <h5 class="font-bold text-sky-800">Laravel</h5>
-                        <p class="text-1xl font-thin">Advance PHP framework</p>
+                        <h5 class="font-bold text-sky-800">{{ $course->name }}</h5>
+                        <p class="text-1xl font-thin">{{ $course->description}}</p>
                         <div class="flex items-center justify-between">
-                            <p class="text-1xl text-sky-500">$200.00</p>
-                            <a href="#" class="px-2 py-1  text-white bg-red-500 rounded-full hover:opacity-80">pay</a>
+                            <p class="text-1xl text-sky-500">${{$course->price}} <span class="text-red-500 text-xs"><strike>$340</strike></span></p>
+                            <a href="#" class="px-3 py-0 text-sm text-white bg-sky-500 rounded-full hover:opacity-80">Buy</a>
                         </div>
                     </div>
                 </div>
                 <!-- flex end -->
             </div>
+        @endforeach
             <!-- grid item end -->
-
-            <!-- grid item -->
-            <div class="shadow-lg hover:shadow-none bg-white py-3 px-6 rounded-2xl">
-                <!-- flex -->
-                <div class="flex items-center flex-row p-0.5">
-                    <!-- items -->
-                    <img class="w-12 h-12 ring-2 mr-4 rounded-full ring-white shadow-md shadow-slate-400" src="assets/4.png" alt="">
-                    <div class="flex flex-col w-full">
-                        <h5 class="font-bold text-sky-800">SQL</h5>
-                        <p class="text-1xl font-thin">MS Server Management</p>
-                        <div class="flex items-center justify-between">
-                            <p class="text-1xl text-sky-500">$200.00</p>
-                            <a href="#" class="px-2 py-1 text-white bg-red-500 rounded-full hover:opacity-80">pay</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- flex end -->
-            </div>
-            <!-- grid item end -->
-
-            <!-- grid item -->
-            <div class="shadow-lg hover:shadow-none bg-white py-3 px-6 rounded-2xl">
-                <!-- flex -->
-                <div class="flex items-center flex-row p-0.5">
-                    <!-- items -->
-                    <img class="w-12 h-12 ring-2 mr-4 rounded-full ring-white shadow-md shadow-slate-400" src="assets/3.png" alt="">
-                    <div class="flex flex-col w-full">
-                        <h5 class="font-bold text-sky-800">Laravel</h5>
-                        <p class="text-1xl font-thin">Advance PHP framework</p>
-                        <div class="flex items-center justify-between">
-                            <p class="text-1xl text-sky-500">$200.00</p>
-                            <a href="#" class="px-2 py-1 text-white bg-red-500 rounded-full hover:opacity-80">pay</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- flex end -->
-            </div>
-            <!-- grid item end -->
-
-            <!-- grid item -->
-            <div class="shadow-lg hover:shadow-none bg-white py-3 px-6 rounded-2xl">
-                <!-- flex -->
-                <div class="flex items-center flex-row p-0.5">
-                    <!-- items -->
-                    <img class="w-12 h-12 ring-2 mr-4 rounded-full ring-white shadow-md shadow-slate-400" src="assets/5.png" alt="">
-                    <div class="flex flex-col w-full">
-                        <h5 class="font-bold text-sky-800">Laravel</h5>
-                        <p class="text-1xl font-thin">Advance PHP framework</p>
-                        <div class="flex items-center justify-between">
-                            <p class="text-1xl text-sky-500">$200.00</p>
-                            <a href="#" class="px-2 py-1 text-white bg-red-500 rounded-full hover:opacity-80">pay</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- flex end -->
-            </div>
-            <!-- grid item end -->
-
-            <!-- grid item -->
-            <div class="shadow-lg hover:shadow-none bg-white py-3 px-6 rounded-2xl">
-                <!-- flex -->
-                <div class="flex items-center flex-row p-0.5">
-                    <!-- items -->
-                    <img class="w-12 h-12 ring-2 mr-4 rounded-full ring-white shadow-md shadow-slate-400" src="assets/6.png" alt="">
-                    <div class="flex flex-col w-full">
-                        <h5 class="font-bold text-sky-800">Laravel</h5>
-                        <p class="text-1xl font-thin">Advance PHP framework</p>
-                        <div class="flex items-center justify-between">
-                            <p class="text-1xl text-sky-500">$200.00</p>
-                            <a href="#" class="px-2 py-1 text-white bg-red-500 rounded-full hover:opacity-80">pay</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- flex end -->
-            </div>
-            <!-- grid item end -->
-
-            <!-- grid item -->
-            <div class="shadow-lg hover:shadow-none bg-white py-3 px-6 rounded-2xl">
-                <!-- flex -->
-                <div class="flex items-center flex-row p-0.5">
-                    <!-- items -->
-                    <img class="w-12 h-12 ring-2 mr-4 rounded-full ring-white shadow-md shadow-slate-400" src="assets/7.png" alt="">
-                    <div class="flex flex-col w-full">
-                        <h5 class="font-bold text-sky-800">Laravel</h5>
-                        <p class="text-1xl font-thin">Advance PHP framework</p>
-                        <div class="flex items-center justify-between">
-                            <p class="text-1xl text-sky-500">$200.00</p>
-                            <a href="#" class="px-2 py-1 text-white bg-red-500 rounded-full hover:opacity-80">pay</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- flex end -->
-            </div>
-            <!-- grid item end -->
-
-            <!-- grid item -->
-            <div class="shadow-lg hover:shadow-none bg-white py-3 px-6 rounded-2xl">
-                <!-- flex -->
-                <div class="flex items-center flex-row p-0.5">
-                    <!-- items -->
-                    <img class="w-12 h-12 ring-2 mr-4 rounded-full ring-white shadow-md shadow-slate-400" src="assets/8.png" alt="">
-                    <div class="flex flex-col w-full">
-                        <h5 class="font-bold text-sky-800">Laravel</h5>
-                        <p class="text-1xl font-thin">Advance PHP framework</p>
-                        <div class="flex items-center justify-between">
-                            <p class="text-1xl text-sky-500">$200.00</p>
-                            <a href="#" class="px-2 py-1 text-white bg-red-500 rounded-full hover:opacity-80">pay</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- flex end -->
-            </div>
-            <!-- grid item end -->
-
-            <!-- grid item -->
-            <div class="shadow-lg hover:shadow-none bg-white py-3 px-6 rounded-2xl">
-                <!-- flex -->
-                <div class="flex items-center flex-row p-0.5">
-                    <!-- items -->
-                    <img class="w-12 h-12 ring-2 mr-4 rounded-full ring-white shadow-md shadow-slate-400" src="assets/1.png" alt="">
-                    <div class="flex flex-col w-full">
-                        <h5 class="font-bold text-sky-800">Laravel</h5>
-                        <p class="text-1xl font-thin">Advance PHP framework</p>
-                        <div class="flex items-center justify-between">
-                            <p class="text-1xl text-sky-500">$200.00</p>
-                            <a href="#" class="px-2 py-1 text-white bg-red-500 rounded-full hover:opacity-80">pay</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- flex end -->
-            </div>
-            <!-- grid item end -->
-            
-
-  
         </div>
         <!-- grid container end -->
         

@@ -14,7 +14,6 @@
 </head>
 <body>
 
-
 <!-- nav -->
 <section id="nav" class="border-b border-gray-50">
     <nav class="relative container mx-auto p-5">
@@ -23,7 +22,7 @@
             <!-- logo -->
             <div class="w-11">
                 <a href="{{ route('dashboard') }}">
-                    <img src="../assets/logo.png" alt="">
+                    <img src="{{ asset('assets/logo.png') }}" alt="">
                 </a>
             </div>
             <!-- links & search-->
@@ -39,7 +38,7 @@
                     <div class="flex flex-row space-x-1 justify-center items-center">
                         <a href="#" class="px-4 py-1 text-white rounded-full">
                             <div class="flex relative flex-row items-center justify-center">
-                                <img class="rounded-full w-10 h-10 ring-2 hover:ring-red-500 ring-gray-400" src="../assets/profilepix.jpg" alt="">
+                                <img class="rounded-full w-10 h-10 ring-2 hover:ring-red-500 ring-gray-400" src="{{asset('assets/profilepix.jpg')}}" alt="">
                                 <span class="text-gray-100 absolute ml-1 hover:opacity-80 top-2 left-9">
                                     <svg width="25px" height="25px" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M17 10.5L12.5 15L8 10.5" stroke="#96989c" stroke-width="1.2"></path> </g></svg>
                                 </span>
@@ -118,7 +117,7 @@
                 <div class="flex flex-col items-center space-y-8 md:items-start md:space-y-4">
     <!--                logo-->
                     <div class="w-16 h-16">
-                        <img src="../assets/logo.png" alt="" class="w-full md:ml-3">
+                        <img src="{{asset('assets/logo.png')}}" alt="" class="w-full md:ml-3">
                     </div>
     <!--                menu container-->
                     <div class="flex flex-col items-center space-y-4 font-bold text-white md:flex-row md:space-y-0 md:space-x-6 md:ml-3">
@@ -165,19 +164,19 @@
                     <div class="flex items-center justify-center mx-auto md:mx-0 space-x-4 md:justify-end">
     <!--                    icon 1-->
                         <div class="h-8 group">
-                            <a href="#"><img src="../assets/fb.png" alt="" class="h-6"></a>
+                            <a href="#"><img src="{{asset('assets/fb.png')}}" alt="" class="h-6"></a>
                         </div>
                         <!--                    icon 2-->
                         <div class="h-8 group">
-                            <a href="#"><img src="../assets/twitter.png" alt="" class="h-6"></a>
+                            <a href="#"><img src="{{asset('assets/twitter.png')}}" alt="" class="h-6"></a>
                         </div>
                         <!--                    icon 3-->
                         <div class="h-8 group">
-                            <a href="#"> <img src="../assets/instagram.png" alt="" class="h-6"></a>
+                            <a href="#"> <img src="{{asset('assets/instagram.png')}}" alt="" class="h-6"></a>
                         </div>
                         <!--                    icon 4-->
                         <div class="h-8 group">
-                            <a href="#"> <img src="../assets/inn.png" alt="" class="h-6"></a>
+                            <a href="#"> <img src="{{asset('assets/inn.png')}}" alt="" class="h-6"></a>
                         </div>
                     </div>
     <!--                copy right -->
@@ -188,6 +187,5 @@
             </div>
         </div>
     </footer>
-
 </body>
 </html>

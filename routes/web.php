@@ -32,10 +32,14 @@ Route::get('/contact', function() {
     return view('contact');
 })->name('contact');
 
-Route::get('/courses', function() {
-    return view('courses');
-})->name('courses');
+Route::get('/courses', 'App\Http\Controllers\CourseController@index')->name('courses');
 
 // public pages ends
 
 // i need to add the above public pages to home controller and re-route them acordingly
+
+//pages on admin page
+
+Route::get('/admin/courses/index', 'App\Http\Controllers\CourseController@courses')->name('admin.courses.index');
+Route::get('/admin/courses/create', 'App\Http\Controllers\CourseController@create')->name('admin.courses.create');
+Route::post('/admin/courses/store', 'App\Http\Controllers\CourseController@store')->name('admin.courses.store');
